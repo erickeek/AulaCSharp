@@ -49,6 +49,7 @@
     <Compile Include="ExemploDeLeituraEConversao.cs" />
     <Compile Include="Exemplos\ExemploDeClasse.cs" />
     <Compile Include="Exemplos\ExemploDeEstruturasDeRepeticao.cs" />
+    <Compile Include="Exemplos\ExemploDeHeranca.cs" />
     <Compile Include="Exemplos\ExemploDeUsoDeMetodosDasClasses.cs" />
     <Compile Include="Exercicios\ExercicioApresentandoArraysESomas.cs" />
     <Compile Include="Exercicios\ExercicioApresentandoNumerosParesDe2A100.cs" />
