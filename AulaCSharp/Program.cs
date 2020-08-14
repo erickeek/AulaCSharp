@@ -1,5 +1,5 @@
-﻿using System;
-using AulaCSharp.Exercicios;
+﻿using AulaCSharp.Exercicios;
+using System;
 
 namespace AulaCSharp
 {
@@ -8,7 +8,7 @@ namespace AulaCSharp
         // função principal, chamada automaticamente
         public static void Main()
         {
-            ExercicioEscola.Executar();
+            ExercicioAgenda.Executar();
 
             Console.ReadKey();
         }

@@ -70,6 +70,8 @@
     <Compile Include="Exercicios\ExercicioUtilizandoParametroOut.cs" />
     <Compile Include="Exercicios\ExercicioValidandoOTipoDeExtensao.cs" />
     <Compile Include="Exercicios\ExercicioVerificaSeEhVogal.cs" />
+    <Compile Include="Exercicios\ExercicioAgenda.cs" />
+    <Compile Include="Models\Amigo.cs" />
     <Compile Include="Models\Carro.cs" />
     <Compile Include="Models\Circulo.cs" />
     <Compile Include="Models\Cliente.cs" />
