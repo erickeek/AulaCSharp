@@ -44,7 +44,7 @@ namespace AulaCSharp.Exemplos
     {
         public override void Tocar()
         {
-            Console.WriteLine("Aprendendo o nome das cordas");
+            Console.WriteLine("Batendo nas cordas");
         }
     }
 
@@ -52,7 +52,7 @@ namespace AulaCSharp.Exemplos
     {
         public override void Tocar()
         {
-            Console.WriteLine("Aprendendo coordenção motora");
+            Console.WriteLine("Batentendo nas peças");
         }
     }
 
@@ -66,6 +66,11 @@ namespace AulaCSharp.Exemplos
         }
 
         public abstract void Exportar();
+
+        public virtual string CaminhoDoArquivo()
+        {
+            return "c:/";
+        }
     }
 
     public class ExportarRelatorioDeAmigosEmPdf : ExportarRelatorioDeAmigos
@@ -77,6 +82,12 @@ namespace AulaCSharp.Exemplos
         public override void Exportar()
         {
             Console.WriteLine("Vou criar um pdf");
+        }
+
+        public override string CaminhoDoArquivo()
+        {
+            var caminhoDoArquivo = base.CaminhoDoArquivo();
+            return $"{caminhoDoArquivo}pdf/"; // c:/pdf/
         }
     }
 

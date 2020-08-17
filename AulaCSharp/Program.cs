@@ -1,4 +1,4 @@
-﻿using AulaCSharp.Exemplos;
+﻿using AulaCSharp.Services;
 using System;
 
 namespace AulaCSharp
@@ -8,31 +8,15 @@ namespace AulaCSharp
         // função principal, chamada automaticamente
         public static void Main()
         {
-            InstrumentoMusical instrumentoMusical = new InstrumentoMusical();
-            InstrumentoMusical guitarra = new Guitarra();
-            InstrumentoMusical bateria = new Bateria();
+            Console.Write("Digite um cep: ");
+            var cep = Console.ReadLine();
 
-            var instrumentos = new[] { instrumentoMusical, guitarra, bateria };
-            foreach (var instrumento in instrumentos)
-            {
-                instrumento.Tocar();
-            }
+            var endereco = CepService.Consultar(cep);
 
-            bool exportarEmPdf = false;
-            string nomeDoArquivo;
-            ExportarRelatorioDeAmigos exportador;
-            if (exportarEmPdf)
-            {
-                nomeDoArquivo = "arquivo.pdf";
-                exportador = new ExportarRelatorioDeAmigosEmPdf(nomeDoArquivo);
-            }
-            else
-            {
-                nomeDoArquivo = "arquivo.xls";
-                exportador = new ExportarRelatorioDeAmigosEmExcel(nomeDoArquivo);
-            }
-
-            exportador.Exportar();
+            Console.WriteLine($"Logradouro: {endereco.Logradouro}");
+            Console.WriteLine($"Bairro: {endereco.Bairro}");
+            Console.WriteLine($"Cidade: {endereco.Cidade}");
+            Console.WriteLine($"Uf: {endereco.Uf}");
 
             Console.ReadKey();
         }
