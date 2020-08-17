@@ -48,12 +48,16 @@
   <ItemGroup>
     <Compile Include="ApesentacaoDeIfESwitch.cs" />
     <Compile Include="Cliente.cs" />
+    <Compile Include="Enums\Status.cs" />
+    <Compile Include="Exceptions\PermissaoException.cs" />
     <Compile Include="ExemploCalculoDeDependentes.cs" />
     <Compile Include="ExemploDeLeituraEConversao.cs" />
+    <Compile Include="Exemplos\ExemploClassesVsStruct.cs" />
     <Compile Include="Exemplos\ExemploDeClasse.cs" />
     <Compile Include="Exemplos\ExemploDeEstruturasDeRepeticao.cs" />
     <Compile Include="Exemplos\ExemploDeHeranca.cs" />
     <Compile Include="Exemplos\ExemploDeUsoDeMetodosDasClasses.cs" />
+    <Compile Include="Exemplos\ExemploHerancaAnimal.cs" />
     <Compile Include="Exercicios\ExercicioApresentandoArraysESomas.cs" />
     <Compile Include="Exercicios\ExercicioApresentandoNumerosParesDe2A100.cs" />
     <Compile Include="Exercicios\ExercicioApresentandoOMaiorEMenorDeUmArray.cs" />
@@ -68,6 +72,7 @@
     <Compile Include="Exercicios\ExercicioFrotaDeCarrros.cs" />
     <Compile Include="Exercicios\ExercicioFuncionamentoDoParamsERef.cs" />
     <Compile Include="Exercicios\ExercicioParaSomarValoresDeUmArray.cs" />
+    <Compile Include="Exercicios\ExercicioPedidoEnviado.cs" />
     <Compile Include="Exercicios\ExercicioSomaESubtrai.cs" />
     <Compile Include="Exercicios\ExercicioSomandoNumerosDe1A50.cs" />
     <Compile Include="Exercicios\ExercicioTestaPizza.cs" />
@@ -75,12 +80,15 @@
     <Compile Include="Exercicios\ExercicioValidandoOTipoDeExtensao.cs" />
     <Compile Include="Exercicios\ExercicioVerificaSeEhVogal.cs" />
     <Compile Include="Exercicios\ExercicioAgenda.cs" />
+    <Compile Include="Helpers\IntHelper.cs" />
     <Compile Include="Models\Amigo.cs" />
     <Compile Include="Models\Carro.cs" />
     <Compile Include="Models\Circulo.cs" />
     <Compile Include="Models\Cliente.cs" />
     <Compile Include="Models\Endereco.cs" />
     <Compile Include="Models\Escola.cs" />
+    <Compile Include="Models\Pedido.cs" />
+    <Compile Include="Models\PedidoEnviado.cs" />
     <Compile Include="Models\Pizza.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

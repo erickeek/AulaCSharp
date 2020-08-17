@@ -1,4 +1,4 @@
-﻿using AulaCSharp.Services;
+﻿using AulaCSharp.Exemplos;
 using System;
 
 namespace AulaCSharp
@@ -8,17 +8,18 @@ namespace AulaCSharp
         // função principal, chamada automaticamente
         public static void Main()
         {
-            Console.Write("Digite um cep: ");
-            var cep = Console.ReadLine();
+            var livro = new Livro { Isbn = 2 };
 
-            var endereco = CepService.Consultar(cep);
+            var a = new Livro { Isbn = 1 };
+            var b = a;
+            a.Isbn = 2;
 
-            Console.WriteLine($"Logradouro: {endereco.Logradouro}");
-            Console.WriteLine($"Bairro: {endereco.Bairro}");
-            Console.WriteLine($"Cidade: {endereco.Cidade}");
-            Console.WriteLine($"Uf: {endereco.Uf}");
+            Console.WriteLine(livro.Isbn);
+        }
 
-            Console.ReadKey();
+        public static void TestarLivro(Livro livro)
+        {
+            livro.Isbn = 1;
         }
     }
 }
