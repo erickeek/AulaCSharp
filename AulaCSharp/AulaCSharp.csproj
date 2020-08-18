@@ -68,6 +68,7 @@
     <Compile Include="Exemplos\ExemploDeHeranca.cs" />
     <Compile Include="Exemplos\ExemploDeUsoDeMetodosDasClasses.cs" />
     <Compile Include="Exemplos\ExemploHerancaAnimal.cs" />
+    <Compile Include="Exemplos\ExemploTrabalhandoComBanco.cs" />
     <Compile Include="Exercicios\ExercicioApresentandoArraysESomas.cs" />
     <Compile Include="Exercicios\ExercicioApresentandoNumerosParesDe2A100.cs" />
     <Compile Include="Exercicios\ExercicioApresentandoOMaiorEMenorDeUmArray.cs" />

@@ -1,6 +1,4 @@
-﻿using AulaCSharp.Context;
-using System;
-using System.Linq;
+﻿using System;
 
 namespace AulaCSharp
 {
@@ -9,12 +7,6 @@ namespace AulaCSharp
         // função principal, chamada automaticamente
         public static void Main()
         {
-            var context = new AulaContext();
-
-            foreach (var genero in context.Generos.OrderBy(q => q.Nome))
-            {
-                Console.WriteLine($"{genero.Id}, {genero.Nome}");
-            }
 
             Console.ReadKey();
         }

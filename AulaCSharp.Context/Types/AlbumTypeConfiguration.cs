@@ -9,7 +9,7 @@ namespace AulaCSharp.Context.Types
         {
             HasKey(q => q.Id);
 
-            Property(q => q.Nome).HasMaxLength(100);
+            Property(q => q.Nome).IsRequired().HasMaxLength(100);
 
             HasRequired(q => q.Genero).WithMany().HasForeignKey(q => q.IdGenero);
 
