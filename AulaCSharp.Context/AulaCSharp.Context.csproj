@@ -5,19 +5,18 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9643C401-2AB2-43D5-8A53-FA13285EACA4}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>AulaCSharp</RootNamespace>
-    <AssemblyName>AulaCSharp</AssemblyName>
+    <ProjectGuid>{E0EF8AC3-B8DC-4704-BF9C-02F51138AC16}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AulaCSharp.Context</RootNamespace>
+    <AssemblyName>AulaCSharp.Context</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -27,7 +26,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -42,9 +40,6 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -56,64 +51,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ApesentacaoDeIfESwitch.cs" />
-    <Compile Include="Cliente.cs" />
-    <Compile Include="Enums\Status.cs" />
-    <Compile Include="Exceptions\PermissaoException.cs" />
-    <Compile Include="ExemploCalculoDeDependentes.cs" />
-    <Compile Include="ExemploDeLeituraEConversao.cs" />
-    <Compile Include="Exemplos\ExemploClassesVsStruct.cs" />
-    <Compile Include="Exemplos\ExemploDeClasse.cs" />
-    <Compile Include="Exemplos\ExemploDeEstruturasDeRepeticao.cs" />
-    <Compile Include="Exemplos\ExemploDeHeranca.cs" />
-    <Compile Include="Exemplos\ExemploDeUsoDeMetodosDasClasses.cs" />
-    <Compile Include="Exemplos\ExemploHerancaAnimal.cs" />
-    <Compile Include="Exercicios\ExercicioApresentandoArraysESomas.cs" />
-    <Compile Include="Exercicios\ExercicioApresentandoNumerosParesDe2A100.cs" />
-    <Compile Include="Exercicios\ExercicioApresentandoOMaiorEMenorDeUmArray.cs" />
-    <Compile Include="Exercicios\ExercicioApresentandoUmArrayNormalEReverso.cs" />
-    <Compile Include="Exercicios\ExercicioCalculandoComissao.cs" />
-    <Compile Include="Exercicios\ExercicioCalculandoQuadradoECuboDeUmNumero.cs" />
-    <Compile Include="Exercicios\ExercicioCalculandoValorDaMesa.cs" />
-    <Compile Include="Exercicios\ExercicioConvertendoPolegadasParaCentimetros.cs" />
-    <Compile Include="Exercicios\ExercicioDePedraPapelTesoura.cs" />
-    <Compile Include="Exercicios\ExercicioEscola.cs" />
-    <Compile Include="Exercicios\ExercicioFormatandoDocumentos.cs" />
-    <Compile Include="Exercicios\ExercicioFrotaDeCarrros.cs" />
-    <Compile Include="Exercicios\ExercicioFuncionamentoDoParamsERef.cs" />
-    <Compile Include="Exercicios\ExercicioParaSomarValoresDeUmArray.cs" />
-    <Compile Include="Exercicios\ExercicioPedidoEnviado.cs" />
-    <Compile Include="Exercicios\ExercicioSomaESubtrai.cs" />
-    <Compile Include="Exercicios\ExercicioSomandoNumerosDe1A50.cs" />
-    <Compile Include="Exercicios\ExercicioTestaPizza.cs" />
-    <Compile Include="Exercicios\ExercicioUtilizandoParametroOut.cs" />
-    <Compile Include="Exercicios\ExercicioValidandoOTipoDeExtensao.cs" />
-    <Compile Include="Exercicios\ExercicioVerificaSeEhVogal.cs" />
-    <Compile Include="Exercicios\ExercicioAgenda.cs" />
-    <Compile Include="Helpers\IntHelper.cs" />
-    <Compile Include="Models\Amigo.cs" />
-    <Compile Include="Models\Carro.cs" />
-    <Compile Include="Models\Circulo.cs" />
-    <Compile Include="Models\Cliente.cs" />
-    <Compile Include="Models\Endereco.cs" />
-    <Compile Include="Models\Escola.cs" />
-    <Compile Include="Models\Pedido.cs" />
-    <Compile Include="Models\PedidoEnviado.cs" />
-    <Compile Include="Models\Pizza.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="AulaContext.cs" />
+    <Compile Include="Models\Album.cs" />
+    <Compile Include="Models\Artista.cs" />
+    <Compile Include="Models\Genero.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\CepService.cs" />
+    <Compile Include="Types\AlbumTypeConfiguration.cs" />
+    <Compile Include="Types\ArtistaTypeConfiguration.cs" />
+    <Compile Include="Types\GeneroTypeConfiguration.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\AulaCSharp.Context\AulaCSharp.Context.csproj">
-      <Project>{e0ef8ac3-b8dc-4704-bf9c-02f51138ac16}</Project>
-      <Name>AulaCSharp.Context</Name>
-    </ProjectReference>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

@@ -1,5 +1,6 @@
-﻿using AulaCSharp.Exemplos;
+﻿using AulaCSharp.Context;
 using System;
+using System.Linq;
 
 namespace AulaCSharp
 {
@@ -8,18 +9,14 @@ namespace AulaCSharp
         // função principal, chamada automaticamente
         public static void Main()
         {
-            var livro = new Livro { Isbn = 2 };
+            var context = new AulaContext();
 
-            var a = new Livro { Isbn = 1 };
-            var b = a;
-            a.Isbn = 2;
+            foreach (var genero in context.Generos.OrderBy(q => q.Nome))
+            {
+                Console.WriteLine($"{genero.Id}, {genero.Nome}");
+            }
 
-            Console.WriteLine(livro.Isbn);
-        }
-
-        public static void TestarLivro(Livro livro)
-        {
-            livro.Isbn = 1;
+            Console.ReadKey();
         }
     }
 }
