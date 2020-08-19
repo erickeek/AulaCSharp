@@ -11,9 +11,10 @@ namespace AulaCSharp.Context
         {
         }
 
-        public DbSet<Album> Albums { get; set; }
+        public DbSet<Album> Albuns { get; set; }
         public DbSet<Artista> Artistas { get; set; }
         public DbSet<Genero> Generos { get; set; }
+        public DbSet<Musica> Musicas { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

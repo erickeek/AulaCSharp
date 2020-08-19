@@ -1,4 +1,6 @@
-﻿namespace AulaCSharp.Context.Models
+﻿using System.Collections.Generic;
+
+namespace AulaCSharp.Context.Models
 {
     public class Album
     {
@@ -8,7 +10,9 @@
         public string Nome { get; set; }
         public decimal Valor { get; set; }
 
-        public Artista Artista { get; set; }
-        public Genero Genero { get; set; }
+        public virtual Artista Artista { get; set; }
+        public virtual Genero Genero { get; set; }
+
+        public virtual ICollection<Musica> Musicas { get; set; } = new HashSet<Musica>();
     }
 }

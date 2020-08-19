@@ -62,12 +62,14 @@
     <Compile Include="Exceptions\PermissaoException.cs" />
     <Compile Include="ExemploCalculoDeDependentes.cs" />
     <Compile Include="ExemploDeLeituraEConversao.cs" />
+    <Compile Include="Exemplos\ExemploAdicionandoNoBancoMuitosParaMuitos.cs" />
     <Compile Include="Exemplos\ExemploClassesVsStruct.cs" />
     <Compile Include="Exemplos\ExemploDeClasse.cs" />
     <Compile Include="Exemplos\ExemploDeEstruturasDeRepeticao.cs" />
     <Compile Include="Exemplos\ExemploDeHeranca.cs" />
     <Compile Include="Exemplos\ExemploDeUsoDeMetodosDasClasses.cs" />
     <Compile Include="Exemplos\ExemploHerancaAnimal.cs" />
+    <Compile Include="Exemplos\ExemploListandoDoBanco.cs" />
     <Compile Include="Exemplos\ExemploTrabalhandoComBanco.cs" />
     <Compile Include="Exercicios\ExercicioApresentandoArraysESomas.cs" />
     <Compile Include="Exercicios\ExercicioApresentandoNumerosParesDe2A100.cs" />

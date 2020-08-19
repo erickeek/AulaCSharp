@@ -56,10 +56,12 @@
     <Compile Include="Models\Album.cs" />
     <Compile Include="Models\Artista.cs" />
     <Compile Include="Models\Genero.cs" />
+    <Compile Include="Models\Musica.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Types\AlbumTypeConfiguration.cs" />
     <Compile Include="Types\ArtistaTypeConfiguration.cs" />
     <Compile Include="Types\GeneroTypeConfiguration.cs" />
+    <Compile Include="Types\MusicaTypeConfiguration.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
