@@ -14,5 +14,10 @@ namespace AulaCSharp.Context.Models
         public virtual Genero Genero { get; set; }
 
         public virtual ICollection<Musica> Musicas { get; set; } = new HashSet<Musica>();
+
+        public override string ToString()
+        {
+            return $"{Id,-10}{Nome,-20}{Artista.Nome,-20}{Genero.Nome,-20}";
+        }
     }
 }
