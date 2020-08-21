@@ -9,9 +9,9 @@ namespace AulaCSharp.Projeto.Helpers
     {
         public static Artista RecuperarArtista(this AulaContext context, string enunciado)
         {
-            foreach (var a in context.Artistas)
+            foreach (var item in context.Artistas)
             {
-                Console.WriteLine(a);
+                Console.WriteLine(item);
             }
 
             Artista artista;

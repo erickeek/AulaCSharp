@@ -33,5 +33,11 @@ namespace AulaCSharp.Projeto.Helpers
 
             return numero;
         }
+
+        public static void DigiteQualquerTeclaParaContinuar()
+        {
+            Console.WriteLine("Digite qualquer tecla para continuar...");
+            Console.ReadKey();
+        }
     }
 }

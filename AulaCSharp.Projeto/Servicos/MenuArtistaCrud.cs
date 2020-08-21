@@ -30,14 +30,12 @@ namespace AulaCSharp.Projeto.Servicos
                 Console.WriteLine(artista);
             }
 
-            Console.WriteLine("Digite qualquer tecla para continuar...");
-            Console.ReadKey();
+            ConsoleHelper.DigiteQualquerTeclaParaContinuar();
         }
 
         protected override void Excluir()
         {
-            var artista = RecuperarArtista("Digite um código para excluir: ");
-            if (artista == null) return;
+            var artista = Context.RecuperarArtista("Digite um código para excluir: ");
 
             Context.Artistas.Remove(artista);
             Context.SaveChanges();
@@ -45,20 +43,11 @@ namespace AulaCSharp.Projeto.Servicos
 
         protected override void Atualizar()
         {
-            var artista = RecuperarArtista("Digite um código para atualizar: ");
-            if (artista == null) return;
+            var artista = Context.RecuperarArtista("Digite um código para atualizar: ");
 
             Console.WriteLine($"Código = {artista.Id}");
             artista.Nome = ConsoleHelper.SolicitarTexto($"Digite um novo nome para artista ({artista.Nome}): ");
             Context.SaveChanges();
-        }
-
-        private Artista RecuperarArtista(string enunciado)
-        {
-            Listar();
-
-            var id = ConsoleHelper.SolicitarNumero(enunciado);
-            return Context.Artistas.FirstOrDefault(q => q.Id == id);
         }
     }
 }

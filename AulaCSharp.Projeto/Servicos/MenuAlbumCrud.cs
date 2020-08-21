@@ -1,7 +1,6 @@
 ﻿using AulaCSharp.Context.Models;
-using System;
-using System.Linq;
 using AulaCSharp.Projeto.Helpers;
+using System;
 
 namespace AulaCSharp.Projeto.Servicos
 {
@@ -38,14 +37,12 @@ namespace AulaCSharp.Projeto.Servicos
                 Console.WriteLine(album);
             }
 
-            Console.WriteLine("Digite qualquer tecla para continuar...");
-            Console.ReadKey();
+            ConsoleHelper.DigiteQualquerTeclaParaContinuar();
         }
 
         protected override void Excluir()
         {
-            var album = RecuperarAlbum("Digite um código para excluir: ");
-            if (album == null) return;
+            var album = Context.RecuperarAlbum("Digite um código para excluir: ");
 
             Context.Albuns.Remove(album);
             Context.SaveChanges();
@@ -53,8 +50,7 @@ namespace AulaCSharp.Projeto.Servicos
 
         protected override void Atualizar()
         {
-            var album = RecuperarAlbum("Digite um código para atualizar: ");
-            if (album == null) return;
+            var album = Context.RecuperarAlbum("Digite um código para atualizar: ");
 
             Console.WriteLine($"Código = {album.Id}");
             var nome = ConsoleHelper.SolicitarTexto($"Digite um novo nome para album ({album.Nome}): ");
@@ -68,14 +64,6 @@ namespace AulaCSharp.Projeto.Servicos
             album.Valor = valor;
 
             Context.SaveChanges();
-        }
-
-        private Album RecuperarAlbum(string enunciado)
-        {
-            Listar();
-
-            var id = ConsoleHelper.SolicitarNumero(enunciado);
-            return Context.Albuns.FirstOrDefault(q => q.Id == id);
         }
     }
 }

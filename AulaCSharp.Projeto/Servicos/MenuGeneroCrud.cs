@@ -30,14 +30,12 @@ namespace AulaCSharp.Projeto.Servicos
                 Console.WriteLine(genero);
             }
 
-            Console.WriteLine("Digite qualquer tecla para continuar...");
-            Console.ReadKey();
+            ConsoleHelper.DigiteQualquerTeclaParaContinuar();
         }
 
         protected override void Excluir()
         {
-            var genero = RecuperarGenero("Digite um código para excluir: ");
-            if (genero == null) return;
+            var genero = Context.RecuperarGenero("Digite um código para excluir: ");
 
             Context.Generos.Remove(genero);
             Context.SaveChanges();
@@ -45,20 +43,11 @@ namespace AulaCSharp.Projeto.Servicos
 
         protected override void Atualizar()
         {
-            var genero = RecuperarGenero("Digite um código para atualizar: ");
-            if (genero == null) return;
+            var genero = Context.RecuperarGenero("Digite um código para atualizar: ");
 
             Console.WriteLine($"Código = {genero.Id}");
             genero.Nome = ConsoleHelper.SolicitarTexto($"Digite um novo nome para gênero ({genero.Nome}): ");
             Context.SaveChanges();
-        }
-
-        private Genero RecuperarGenero(string enunciado)
-        {
-            Listar();
-
-            var id = ConsoleHelper.SolicitarNumero(enunciado);
-            return Context.Generos.FirstOrDefault(q => q.Id == id);
         }
     }
 }

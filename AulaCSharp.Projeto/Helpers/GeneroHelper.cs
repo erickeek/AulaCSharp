@@ -9,9 +9,9 @@ namespace AulaCSharp.Projeto.Helpers
     {
         public static Genero RecuperarGenero(this AulaContext context, string enunciado)
         {
-            foreach (var a in context.Generos)
+            foreach (var item in context.Generos)
             {
-                Console.WriteLine(a);
+                Console.WriteLine(item);
             }
 
             Genero genero;
