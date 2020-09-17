@@ -1,4 +1,4 @@
-﻿using AulaCSharp.Exemplos;
+﻿using AulaCSharp.Exercicios;
 using System;
 
 namespace AulaCSharp
@@ -8,7 +8,7 @@ namespace AulaCSharp
         // função principal, chamada automaticamente
         public static void Main()
         {
-            ExemploAdicionandoNoBancoMuitosParaMuitos.Listar();
+            ExercicioJogo.Executar();
 
             Console.ReadKey();
         }
